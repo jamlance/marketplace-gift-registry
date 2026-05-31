@@ -1,0 +1,72 @@
+@import "@inkress/apps-core/styles.css";
+
+/* Gift Registry — registry cards, item manager, gifts log. */
+
+.gr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+.gr-card { padding: 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--e1); overflow: hidden; }
+.gr-card.is-off { opacity: 0.72; }
+.gr-stripe { display: block; height: 5px; background: var(--accent); }
+.gr-card-body { padding: 16px; display: flex; flex-direction: column; gap: 9px; }
+.gr-card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.gr-meta { font-size: 0.8125rem; }
+.gr-prog { display: flex; flex-direction: column; gap: 5px; }
+.gr-bar { height: 7px; background: var(--panel); border-radius: 5px; overflow: hidden; }
+.gr-bar i { display: block; height: 100%; background: var(--accent); border-radius: 5px; transition: width 0.3s; }
+.gr-prog-label { font-size: 0.75rem; }
+.gr-link { display: flex; gap: 6px; }
+.gr-link-input { font-size: 0.72rem; height: 32px; color: var(--ink-soft); }
+.gr-actions { display: flex; gap: 6px; align-items: center; margin-top: 2px; }
+.gr-open { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--line-strong); border-radius: 7px; color: var(--ink-soft); }
+.gr-open:hover { background: var(--panel); }
+.gr-note { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+.gr-gift-msg { font-style: italic; }
+
+.gr-form { display: flex; flex-direction: column; gap: 12px; }
+.gr-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.gr-field { display: flex; flex-direction: column; gap: 5px; }
+.gr-check { display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--ink-soft); }
+.gr-check input { width: auto; height: auto; }
+
+.gr-manage { display: flex; flex-direction: column; gap: 12px; min-width: 340px; }
+.gr-items { display: flex; flex-direction: column; }
+.gr-item-row { display: grid; grid-template-columns: auto 1fr auto auto auto; gap: 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.gr-item-main strong { font-size: 0.9rem; }
+.gr-item-meta { display: flex; flex-direction: column; align-items: flex-end; font-size: 0.8rem; line-height: 1.3; }
+.gr-row-thumb { width: 40px; height: 40px; border-radius: 8px; background: var(--panel) center/cover no-repeat; border: 1px solid var(--line); flex-shrink: 0; }
+.gr-row-thumb.is-empty { background: var(--panel); }
+.gr-divider { height: 1px; background: var(--line); margin: 2px 0; }
+
+.gr-item-form { display: flex; flex-direction: column; gap: 8px; }
+.gr-url-row { display: flex; gap: 8px; }
+.gr-url-row input { flex: 1; }
+.gr-item-form2 { display: flex; gap: 12px; align-items: flex-start; }
+.gr-thumb { width: 84px; height: 84px; border-radius: 10px; background: var(--accent-wash) center/cover no-repeat; border: 1px solid var(--line); flex-shrink: 0; display: grid; place-items: center; }
+.gr-thumb.is-empty::after { content: "🎁"; font-size: 1.4rem; opacity: 0.5; }
+.gr-item-fields { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.gr-item-form-grid { display: grid; grid-template-columns: 1fr 0.6fr; gap: 8px; }
+.gr-item-form .primary.sm { align-self: flex-start; }
+
+/* type segmented control */
+.gr-seg-row { display: inline-flex; gap: 0; border: 1px solid var(--line-strong); border-radius: 9px; overflow: hidden; align-self: flex-start; }
+.gr-seg { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: var(--surface); border: 0; cursor: pointer; font-size: 0.82rem; color: var(--ink-soft); }
+.gr-seg + .gr-seg { border-left: 1px solid var(--line); }
+.gr-seg.on { background: var(--accent-wash); color: var(--accent); font-weight: 600; }
+
+/* cover image */
+.gr-cover-row { display: flex; gap: 12px; align-items: center; }
+.gr-cover-preview { width: 140px; height: 64px; border-radius: 10px; background: var(--accent-wash) center/cover no-repeat; border: 1px solid var(--line); flex-shrink: 0; display: grid; place-items: center; }
+.gr-cover-preview.is-empty::after { content: "🖼"; font-size: 1.3rem; opacity: 0.5; }
+.gr-imgbtns { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* catalog picker */
+.gr-catalog { display: flex; flex-direction: column; gap: 10px; min-width: 360px; }
+.gr-cat-results { display: flex; flex-direction: column; max-height: 320px; overflow-y: auto; }
+.gr-cat-row { display: flex; align-items: center; gap: 10px; padding: 9px 6px; border: 0; border-bottom: 1px solid var(--line); background: var(--surface); cursor: pointer; text-align: left; }
+.gr-cat-row:hover { background: var(--panel); }
+.gr-cat-thumb { width: 40px; height: 40px; border-radius: 8px; background: var(--panel) center/cover no-repeat; border: 1px solid var(--line); flex-shrink: 0; }
+.gr-cat-main { display: flex; flex-direction: column; gap: 2px; }
+
+/* analytics */
+.gr-analytics { display: flex; flex-direction: column; gap: 8px; min-width: 380px; }
+.gr-top { display: flex; flex-direction: column; }
+.gr-top-row { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 0.86rem; }

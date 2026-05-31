@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <linearGradient id="lg-gift-registry" x1="32" y1="3" x2="32" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e879f9"/><stop offset="1" stop-color="#a21caf"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="url(#lg-gift-registry)"/>
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="#fff" opacity=".08"/>
+  <rect x="18" y="28" width="28" height="18" rx="3" fill="#fff"/><rect x="16" y="22" width="32" height="8" rx="3" fill="#fff"/><rect x="29.5" y="22" width="5" height="24" fill="#a21caf"/><path fill="none" stroke="#fff" stroke-width="3" d="M32 22c-3-6-9-3-9 0M32 22c3-6 9-3 9 0"/>
+</svg>
